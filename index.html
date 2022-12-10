@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Brent Does Countdown</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="inner-container">
+            <div class="dual-container">
+                <div class="empty-row">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="empty-row">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="dual-container">
+                <div class="drag-container" id="chosen-word"></div>
+                <div class="drag-container" id="chosen-letters"></div>
+            </div>
+            <div class="button-container">
+                <button id="vowel-button" onclick="ChooseLetter(true)">VOWEL</button>
+                <div class="info-container">
+                    <div id="info-box">Choose a vowel or consonant to get started...</div>
+                    <div id="timer"></div>
+                </div>
+                <button id="consonant-button" onclick="ChooseLetter()">CONSONANT</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
