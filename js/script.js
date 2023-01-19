@@ -1,19 +1,18 @@
 // Variables
 var currentWord = '';
 var goodWord = false;
-var letterCount = [0, 0, 0]; // [Total Letters, Vowels, Consonants]
-var timer; // Public variable in order to reset from different functions
+// [Total Letters, Vowels, Consonants]
+var letterCount = [0, 0, 0];
+// Timer for auto-choose letter
+var timer;
+// Consonants based on scrabble tiles
 var consonants = ['b', 'b', 'c', 'c', 'd', 'd', 'd', 'd', 'f', 'f', 'g', 'g', 'g', 'h', 'h', 'j', 'k', 'l', 'l', 'l', 'l', 'm', 'm', 'n', 'n', 'n', 'n', 'n', 'n',
     'p', 'p', 'q', 'r', 'r', 'r', 'r', 'r', 'r', 's', 's', 's', 's', 't', 't', 't', 't', 't', 't', 'v', 'v', 'w', 'w', 'x', 'y', 'y', 'z'];
+// Vowels based on scrabble tiles
 var vowels = ['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'i', 'i', 'i', 'i',
     'i', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u'];
 
-    var test = LookupWord('bulb');
-    setTimeout(() => {
-        console.log(goodWord);
-      }, 1000);
-    
-
+// Player chooses either vowel or consonant
 function ChooseLetter(isVowel = false) {
     var chosenLetter;
 
